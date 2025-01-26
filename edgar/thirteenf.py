@@ -101,7 +101,8 @@ class ThirteenF:
         else:
             # Use the exact filing that was passed in
             self.filing = self._actual_filing
-        self.primary_form_information = ThirteenF.parse_primary_document_xml(self.filing.xml())
+        filing_xml = self.filing.xml()
+        self.primary_form_information = ThirteenF.parse_primary_document_xml(filing_xml)
 
     def has_infotable(self):
         return self.filing.form in ['13F-HR', "13F-HR/A"]
