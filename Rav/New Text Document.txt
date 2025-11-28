@@ -1,0 +1,38 @@
+Gross Profit Margin = (Revenue - Cost of Sales) / Revenue * 100
+Net Profit Margin = Net Profit / Revenue * 100
+Return on sales = (Earnings before interest and taxes / Net sales) x 100%
+Working Capital = Current Assets - Current Liabilities
+Current Ratio = Current Assets / Current Liabilities
+Quick Ratio = (Current Assets - Inventory) / Current Liabilities
+Leverage = Total Assets / Total Equity
+Debt to Equity Ratio = Total Debt / Total Equity
+Inventory Turnover = Cost of Sales / (Beginning Inventory + Ending Inventory / 2)
+Total Asset Turnover = Revenue / (Beginning Total Assets + Ending Total Assets / 2)
+Gross burn rate = Company cash / Monthly operating expenses
+Current accounts receivable = (Total accounts receivable – Past due accounts receivable) / Total accounts receivable
+Current accounts payable = (Total accounts payable – Past due accounts receivable) / Total accounts receivable
+Accounts payable turnover = Net Credit Purchases / Average accounts payable balance for period
+Days payable outstanding = (Accounts payable x 365 days) / COGS
+Accounts receivable turnover = Sales on account / Average accounts receivable balance for period
+Days sales outstanding = 365 days / Accounts receivable turnover
+Inventory turnover = COGS / Average inventory balance for period
+Days inventory outstanding = 365 days / Inventory turnover
+Operating cycle (Cash Conversion) = Days inventory outstanding + Days sales outstanding
+Sales growth rate = (Current net sales – Prior period net sales) / Prior period net sales x 100
+Fixed asset turnover = Total sales / Average fixed assets
+Return on assets = Net income / Total assets for period
+SGA = (Selling + General + Administrative expense) / Net sales revenue
+Interest coverage = EBIT / Interest expense
+Earnings per share = Net income / Weighted average number of shares outstanding
+Net Cash Per Share = Current Assets / Shares Outstanding
+Price to Free Cash Flow Ratio = Market Price per Share / Free Cash Flow per Share
+
+
+
+
+
+
+
+
+
+
