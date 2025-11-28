@@ -5,6 +5,54 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.33.0] - 2025-11-27
+
+### Added
+
+- **Form 144 Insider Sales Analysis Enhancements**
+  - Added SecuritiesHolder base class with safe DataFrame access pattern for robust data handling
+  - Added specialized holder classes: SecuritiesInformationHolder, SecuritiesToBeSoldHolder, SecuritiesSoldPast3MonthsHolder
+  - Added aggregation properties: total_units_to_be_sold, total_market_value, percent_of_outstanding, security_classes, exchanges, brokers
+  - Added investor/analyst metrics: percent_of_holdings, avg_price_per_unit, is_10b5_1_plan, days_since_plan_adoption, cooling_off_compliant
+  - Added anomaly detection flags: LARGE_LIQUIDATION (>10% holdings sold), SHORT_HOLD (<6 months), COOLING_OFF_VIOLATION (<30 days from plan adoption)
+  - Added get_summary() method for quick filing overview with key metrics
+  - Added to_dataframe() method for unified securities data export
+  - Added to_analyst_summary() method for investment analysis with anomaly flags
+  - Revamped rich console display with summary metrics, conditional table rendering, and 10b5-1 plan compliance status
+  - Comprehensive test coverage for all new features (354 lines of new tests)
+  - **Usage**: Enhanced Form144 objects now provide deep analytical capabilities for insider trading analysis
+  - **Impact**: Enables sophisticated insider trading analysis including pattern detection, compliance monitoring, and risk assessment
+  - **Commits**: 7f00ef6b
+
+### Fixed
+
+- **Form 144 Date Parsing Critical Bug**
+  - Fixed plan_adoption_dates parsing that was incorrectly returning None instead of actual dates
+  - Fixed placeholder date filtering to properly handle all 1933 dates (SEC form default placeholder values)
+  - **Impact**: 10b5-1 plan analysis now works correctly with accurate adoption dates
+  - **Commits**: 7f00ef6b
+
+## [4.32.0] - 2025-11-26
+
+### Added
+
+- **Schedule 13D/G Beneficial Ownership Report Parsing**
+  - Complete XML-based parsing for Schedule 13D (active ownership) and Schedule 13G (passive institutional ownership) filings
+  - Track activist investors and institutional holders with 5%+ stakes in public companies
+  - Full support for all disclosure items (Items 1-7 for 13D, Items 1-10 for 13G)
+  - Multiple reporting persons support for joint filer arrangements
+  - Amendment tracking with ownership change comparison between filings
+  - Rich console rendering with formatted signatures display
+  - New package: edgar.beneficial_ownership with models, parsers, amendments, and rendering
+  - Integration with filing.obj() dispatcher for automatic form type handling
+  - Safe numeric parsing handling decimals, commas, and whitespace in ownership percentages
+  - Frozen dataclasses for immutable data structures ensuring data integrity
+  - Comprehensive type annotations for IDE support and type safety
+  - 15 tests covering parsing, amendments, rendering, and error handling
+  - **Usage**: filing.obj() on SCHEDULE 13D/13G filings returns Schedule13D/Schedule13G objects
+  - **Impact**: Enables tracking of activist campaigns, institutional ownership, and beneficial ownership changes
+  - **Commits**: fb73484b, ad66faf5, 37b4c806, 2618b1d5
+
 ## [4.31.0] - 2025-11-24
 
 ### Fixed
